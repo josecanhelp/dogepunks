@@ -234,8 +234,16 @@ export default function App() {
             <span>such frendship</span>
           )}
         </h2>
-        <img className="mx-auto" src="doge.png" alt="doge doggie"/>
-        <div className="text-4xl">
+        <img className="mx-auto" src="doge.png" alt="doge doggie" />
+        <a
+          className="pt-24 text-sm font-light text-indigo-500 hover:text-white"
+          href="https://explorer.stacks.co/txid/0x2e3f2fe40bc7e4ffaa7a8760d4f3ec94652587bdf82d9033059859f08303907e?chain=mainnet"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Contract Deployment
+        </a>
+        <div className="pt-12 text-4xl">
           <span className="font-bold">{25 - lastId}</span>/25 DogePunks left
         </div>
         <div className="p-3">free.99</div>
