@@ -1,22 +1,11 @@
-import React, {
-  useEffect,
-  useMemo,
-  useCallback,
-} from "react";
+import React, { useEffect, useMemo, useCallback } from "react";
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 import axios from "axios";
-import "./App.css";
 import { StacksTestnet, StacksMainnet } from "@stacks/network";
-import {
-  AppConfig,
-  UserSession,
-  showConnect,
-} from "@stacks/connect";
-import {
-  callReadOnlyFunction,
-  uintCV,
-} from "@stacks/transactions";
+import { AppConfig, UserSession, showConnect } from "@stacks/connect";
+import { callReadOnlyFunction, uintCV } from "@stacks/transactions";
+import AllPunks from "./components/AllPunks";
 
 const punkContractAddress = process.env.REACT_APP_PUNK_CONTRACT_ADDRESS;
 const punkContractName = process.env.REACT_APP_PUNK_CONTRACT_NAME;
@@ -139,9 +128,8 @@ export default function App() {
         >
           View Contract Deployment
         </a>
-        <div className="pt-12 text-4xl">
-            Sold Out!
-        </div>
+        <div className="pt-12 text-4xl">Sold Out!</div>
+        <AllPunks />
         <div className="flex justify-center mt-8">
           <div className="inline-flex shadow rounded-md">
             {!isWalletConnected() ? (
@@ -153,7 +141,7 @@ export default function App() {
                 conekt
               </button>
             ) : (
-                <span></span>
+              <span></span>
             )}
           </div>
 
