@@ -34,7 +34,7 @@ const currentAddressAtom = atomWithStorage("stacks-wallet-address", "");
 const userDataAtom = atomWithStorage("user-data", {});
 const urisAtom = atomWithStorage("uris", []);
 const contractEnabledAtom = atomWithStorage("contract-enabled", false);
-const staxios = axios.create({ baseURL: "http://localhost:3999" });
+const staxios = axios.create({ baseURL: process.env.REACT_APP_NETWORK_URL });
 const network =
   process.env.REACT_APP_NETWORK === "mainnet"
     ? new StacksMainnet()
@@ -115,7 +115,7 @@ export default function App() {
       onFinish: async () => {
         let userData = await userSession.loadUserData();
         setUserData(userData);
-        if (process.env.REACT_APP_NETWORK === "mainnet") {
+        if (process.env.REACT_APP_NETWORK == "mainnet") {
           setCurrentAddress(userData?.profile?.stxAddress?.mainnet);
         } else {
           setCurrentAddress(userData?.profile?.stxAddress?.testnet);
