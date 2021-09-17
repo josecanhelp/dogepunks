@@ -68,7 +68,7 @@ export default function App() {
         (a) =>
           a.event_type === "non_fungible_token_asset" &&
           a.asset.asset_id ===
-            "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.doge-punks-v1::doge-punks"
+            `${process.env.REACT_APP_PUNK_CONTRACT_ADDRESS}.doge-punks-v1::doge-punks`
       )
       .map((a) => parseInt(a.asset.value.repr.substr(1)))
       .sort();
