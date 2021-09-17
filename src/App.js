@@ -112,6 +112,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-red-200">
       <div className="flex-col items-center justify-center px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+        <h1 className="pb-10 text-6xl font-extrabold tracking-tight text-gray-700">
+          DogePunks on Stacks!
+        </h1>
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           {isWalletConnected() ? (
             <span>Much Wow!</span>
