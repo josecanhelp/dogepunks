@@ -115,7 +115,7 @@ export default function App() {
       onFinish: async () => {
         let userData = await userSession.loadUserData();
         setUserData(userData);
-        if (process.env.REACT_APP_NETWORK == "mainnet") {
+        if (process.env.REACT_APP_NETWORK === "mainnet") {
           setCurrentAddress(userData?.profile?.stxAddress?.mainnet);
         } else {
           setCurrentAddress(userData?.profile?.stxAddress?.testnet);
