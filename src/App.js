@@ -128,7 +128,7 @@ export default function App() {
         >
           View Contract Deployment
         </a>
-        <div className="pt-12 text-4xl">Sold Out!</div>
+        <div className="pt-12 text-6xl font-bold">Sold Out!</div>
         <AllPunks />
         <div className="flex justify-center mt-8">
           <div className="inline-flex shadow rounded-md">
@@ -161,12 +161,16 @@ export default function App() {
 
       <div className="max-w-2xl mx-auto">
         <div>
-          <h2 className="text-3xl font-bold">my dogeies</h2>
-          <ul>
-            {uris.map((uri) => {
-              return DogeCard(uri);
-            })}
-          </ul>
+          {isWalletConnected() && (
+            <div>
+              <h2 className="text-3xl font-bold">my dogeies</h2>
+              <ul>
+                {uris.map((uri) => {
+                  return DogeCard(uri);
+                })}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

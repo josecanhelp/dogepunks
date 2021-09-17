@@ -8,7 +8,7 @@ export default function AllPunks() {
     for (let i = 1; i < 26; i++) {
       tempUris.push({
         id: i,
-        src: `https://jch.sfo3.digitaloceanspaces.com/doge-punks/punk${i}.png`,
+        src: `https://jch.sfo3.digitaloceanspaces.com/doge-punks/punk${i}@20x.png`,
       });
     }
     setUris(tempUris);
