@@ -87,7 +87,6 @@ export default function App() {
     Promise.all(new_assets).then((res) =>
       setUris(res.map((a) => a.value.value.data))
     );
-    console.log("uris", uris);
   }, [currentAddress, setUris]);
 
   useEffect(() => {
