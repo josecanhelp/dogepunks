@@ -244,7 +244,7 @@ export default function App() {
           View Contract Deployment
         </a>
         <div className="pt-12 text-4xl">
-          <span className="font-bold">{25 - lastId}</span>/25 DogePunks left
+            Sold Out!
         </div>
         <div className="p-3">free.99</div>
         <div className="flex justify-center mt-8">
@@ -258,13 +258,7 @@ export default function App() {
                 conekt
               </button>
             ) : (
-              <button
-                onClick={mintPunk}
-                type="button"
-                className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700"
-              >
-                mint
-              </button>
+                <span></span>
             )}
           </div>
 
