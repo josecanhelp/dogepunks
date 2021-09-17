@@ -87,6 +87,7 @@ export default function App() {
     Promise.all(new_assets).then((res) =>
       setUris(res.map((a) => a.value.value.data))
     );
+    console.log("uris", uris);
   }, [currentAddress, setUris]);
 
   useEffect(() => {
@@ -283,16 +284,14 @@ export default function App() {
       </div>
 
       <div className="max-w-2xl mx-auto">
-        {uris.length > 0 && (
-          <div>
-            <h2 className="text-3xl font-bold">my dogeies</h2>
-            <ul>
-              {uris.map((uri) => {
-                return DogeCard(uri);
-              })}
-            </ul>
-          </div>
-        )}
+        <div>
+          <h2 className="text-3xl font-bold">my dogeies</h2>
+          <ul>
+            {uris.map((uri) => {
+              return DogeCard(uri);
+            })}
+          </ul>
+        </div>
       </div>
       <Transition.Root show={modalOpen} as={Fragment}>
         <Dialog
