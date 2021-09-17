@@ -10,7 +10,6 @@ export default function AllPunks() {
         id: i,
         src: `https://jch.sfo3.digitaloceanspaces.com/doge-punks/punk${i}.png`,
       });
-        console.log(tempUris);
     }
     setUris(tempUris);
   }, [setUris]);
